@@ -83,5 +83,6 @@ li {
 }
 input {
   background-color: rgba(84, 84, 84, 0.48);
+  color: rgba(235, 235, 235, 0.64);
 }
 </style>

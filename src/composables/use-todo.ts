@@ -6,7 +6,7 @@ export default function useTodo() {
   const todoInput = ref("");
   const todos = ref<ITodo[]>([]);
 
-  let dragged: ITodo;
+  let dragItem: ITodo;
   let dragIndex: number;
   let enter: number;
 
@@ -40,7 +40,7 @@ export default function useTodo() {
 
   const dragStart = (todo: ITodo): void => {
     dragIndex = findIndex(todo);
-    dragged = todo;
+    dragItem = todo;
   };
 
   const dragEnter = (todo: ITodo): void => {
@@ -51,19 +51,19 @@ export default function useTodo() {
     if (dragIndex < enter) {
       todos.value.splice(enter + 1, 0, {
         id: id++,
-        todo: dragged.todo,
-        editing: dragged.editing,
-        done: dragged.done,
+        todo: dragItem.todo,
+        editing: dragItem.editing,
+        done: dragItem.done,
       });
     } else {
       todos.value.splice(enter, 0, {
         id: id++,
-        todo: dragged.todo,
-        editing: dragged.editing,
-        done: dragged.done,
+        todo: dragItem.todo,
+        editing: dragItem.editing,
+        done: dragItem.done,
       });
     }
-    remove(dragged.id);
+    remove(dragItem.id);
   };
 
   return {

@@ -22,7 +22,6 @@ const createCategory = () => {
       v-model="categoryInput"
       @keydown.enter="createCategory"
     />
-    <!-- <button @click="createCategory">Create category</button> -->
     <h3 v-for="category in categories" :key="category">
       {{ category }}
       <TodoList />

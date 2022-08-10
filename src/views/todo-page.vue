@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import TodoList from "../components/todo-list.vue";
-import { ref } from "vue";
 import useCategory from "@/composables/use-category";
 
 const { categoryInput, categories, createCategory } = useCategory();

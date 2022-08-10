@@ -66,7 +66,7 @@ li {
 }
 .material-symbols-outlined.editing {
   font-variation-settings: "FILL" 1, "wght" 200, "GRAD" 200, "opsz" 40;
-  color: blue
+  color: blue;
 }
 .material-symbols-outlined.done {
   font-variation-settings: "FILL" 1, "wght" 200, "GRAD" 200, "opsz" 40;
